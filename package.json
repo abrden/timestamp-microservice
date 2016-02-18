@@ -1,0 +1,28 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp API Project: Timestamp microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abrden/timestamp-microservice.git"
+  },
+  "keywords": [
+    "API",
+    "abrden",
+    "timestamp"
+  ],
+  "author": "Agustina Barbetta (abrden)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abrden/timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/abrden/timestamp-microservice#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb": "^2.1.7"
+  }
+}
