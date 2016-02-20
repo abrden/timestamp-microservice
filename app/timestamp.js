@@ -20,7 +20,8 @@ module.exports = function(app) {
             natural = unixToNat(unix);
         }
         
-        res.send(JSON.stringify({ "unix": unix, "natural": natural }));
+        //res.send(JSON.stringify({ "unix": unix, "natural": natural }));
+        res.json({ "unix": unix, "natural": natural });
         
     });
     
