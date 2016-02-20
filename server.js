@@ -2,22 +2,18 @@
 
 var express = require('express'),
     routes = require('./app/routes/index.js'),
-    mongo = require('mongodb').MongoClient;
+    bodyParser = require('body-parser'),
+    api = require('./app/timestamp.js'),
+    port = 8080,
+    app = express();
 
-var app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use('/public', express.static(process.cwd() + '/public'));
 
-mongo.connect('mongodb://localhost:27017/clementinejs', function (err, db) {
+routes(app);
+api(app);
 
-    if (err) {
-        throw new Error('Database failed to connect!');
-    } else {
-        console.log('MongoDB successfully connected on port 27017.');
-    }
-
-    routes(app, db);
-
-    app.listen(8080, function () {
-        console.log('Listening on port 8080...');
-    });
-
+app.listen(port, function () {
+    console.log('Listening on port 8080...');
 });
