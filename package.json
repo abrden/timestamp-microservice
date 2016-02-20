@@ -15,14 +15,15 @@
     "abrden",
     "timestamp"
   ],
-  "author": "Agustina Barbetta (abrden)",
+  "author": "Agustina (abrden) Barbetta",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/abrden/timestamp-microservice/issues"
   },
   "homepage": "https://github.com/abrden/timestamp-microservice#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
-    "mongodb": "^2.1.7"
+    "moment": "^2.11.2"
   }
 }
